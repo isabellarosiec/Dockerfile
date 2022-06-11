@@ -1,0 +1,10 @@
+FROM rocker/verse:4.1.0
+RUN install2.r --error \
+    --deps TRUE \
+    ggrepel \ 
+    ggtheme \
+    here 
+    
+ RUN apt-get update -qq \ 
+     && apt-get -y --no-install-recommends \
+     install wget curl git 
